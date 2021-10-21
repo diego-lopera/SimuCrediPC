@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#ABD5C8"
+
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:text="Simula tu Credito"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Nombre"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/etnombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Digite su nombre" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Valor del credito"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/etvlrcredito"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:hint="Minimo 4'000,000 - Maximo 100'000,000"
+            android:inputType="numberDecimal"
+
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de prestamo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbvivienda"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Vivienda (0.5%)"
+            android:layout_marginLeft="30dp"
+            android:checked="true"
+
+            />
+
+        <RadioButton
+            android:id="@+id/rbeducacion"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Educación (0.7%)"
+            android:layout_marginLeft="30dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rblibreinv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Libre inversión (1.5%)"
+            android:layout_marginLeft="30dp"
+
+            />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Numero de Cuotas"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbc1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:layout_marginLeft="30dp"
+            android:checked="true"
+
+            />
+
+        <RadioButton
+            android:id="@+id/rbc2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="24"
+            android:layout_marginLeft="30dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rbc3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="36"
+            android:layout_marginLeft="30dp"
+
+            />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbcuotam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Incluir cuota de manejo (8,000)"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Valor de la cuota:"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tvvlrdeuda"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="#F60000"
+            android:textSize="16dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Valor de la deuda:"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            />
+
+        <TextView
+            android:id="@+id/tvtotalpagar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="#F60000"
+            android:textSize="16dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/btncalcular"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:textAllCaps="false"
+            android:backgroundTint="#4CAF50"
+            />
+
+        <Button
+            android:id="@+id/btnlimpiar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Limpiar"
+            android:textAllCaps="false"
+            android:backgroundTint="#E91E1E"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
